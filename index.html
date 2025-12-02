@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>InvisiAura</title>
+
   <style>
-    /* ------------------------------
-       GLOBAL
-    ------------------------------ */
+    /* GLOBAL */
     body {
       margin: 0;
       font-family: "Baskerville", "Baskerville Old Face", Georgia, serif;
@@ -29,9 +28,7 @@
       to { opacity: 1; }
     }
 
-    /* ------------------------------
-       HERO SECTION
-    ------------------------------ */
+    /* HERO */
     .hero {
       height: 45vh;
       min-height: 380px;
@@ -42,7 +39,7 @@
       text-align: center;
       padding: 0 20px;
       position: relative;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
 
     .hero::before {
@@ -52,7 +49,7 @@
       height: 900px;
       background: radial-gradient(
         circle,
-        rgba(214,167,74,0.28) 0%,
+        rgba(214,167,74,0.20) 0%,
         rgba(0,0,0,0) 70%
       );
       filter: blur(40px);
@@ -69,24 +66,25 @@
     .tagline {
       font-size: 1.2rem;
       opacity: 0.85;
-      margin-top: 10px;
+      margin-top: 14px;
       letter-spacing: 1px;
+      white-space: pre-line; /* Allows line breaks */
+      line-height: 1.5;
       max-width: 700px;
-      line-height: 1.4;
     }
 
-    /* ------------------------------
-       VIDEO GRID
-    ------------------------------ */
+    /* SECTION TITLE */
     .section-title {
       text-align: center;
       letter-spacing: 1.5px;
       font-size: 1.6rem;
-      margin-bottom: 24px;
+      margin-top: 10px;
+      margin-bottom: 20px;
       font-weight: 300;
       opacity: 0.95;
     }
 
+    /* VIDEO GRID */
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -123,9 +121,7 @@
       letter-spacing: 0.5px;
     }
 
-    /* ------------------------------
-       FOOTER
-    ------------------------------ */
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -134,7 +130,6 @@
       letter-spacing: 1px;
       border-top: 1px solid rgba(214,167,74,0.25);
     }
-
   </style>
 </head>
 
@@ -143,12 +138,15 @@
   <!-- HERO -->
   <section class="hero fade-in">
     <h1>InvisiAura</h1>
+
     <p class="tagline">
-      Quiet Transformation. Guided Frequency Portals for Alignment, Awakening, and Inner Shift.
+Quiet Transformation.
+Guided Frequency Portals for Alignment.
+Inner Shift. 
     </p>
   </section>
 
-  <!-- VIDEO SECTION TITLE -->
+  <!-- SECTION TITLE -->
   <h2 class="section-title fade-in">Featured Videos</h2>
 
   <!-- VIDEO GRID -->
