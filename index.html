@@ -1,22 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background: black;
-            height: 100vh;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>InvisiAura</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #1A1A1A;
+      color: #D6A74A;
+      overflow-x: hidden;
+    }
+    h1 {
+      text-align: center;
+      font-weight: 300;
+      letter-spacing: 2px;
+      position: relative;
+      z-index: 3;
+      margin-top: 20px;
+    }
+
+    /* Gold dust shimmer background */
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle at center, rgba(214,167,74,0.15) 0%, transparent 70%);
+      animation: shimmer 20s infinite alternate, zoompan 60s infinite alternate;
+      z-index: 0;
+    }
+    @keyframes shimmer {
+      from { opacity: 0.2; }
+      to { opacity: 0.5; }
+    }
+    @keyframes zoompan {
+      from { transform: scale(1) translate(0,0); }
+      to { transform: scale(1.03) translate(-10px,-10px); }
+    }
+
+    /* Symbol overlays */
+    .symbols {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Ring */
+    .symbols::before {
+      content: "";
+      position: absolute;
+      width: 300px; height: 300px;
+      border: 1px solid rgba(214,167,74,0.15);
+      border-radius: 50%;
+      top: 20%; left: 15%;
+      animation: rotate 120s linear infinite;
+    }
+
+    /* Portal */
+    .symbols::after {
+      content: "";
+      position: absolute;
+      width: 200px; height: 200px;
+      border: 1px solid rgba(214,167,74,0.1);
+      border-radius: 50%;
+      bottom: 25%; right: 20%;
+      box-shadow: 0 0 40px rgba(214,167,74,0.2) inset;
+      animation: pulse 15s ease-in-out infinite;
+    }
+
+    /* Spiral */
+    .spiral {
+      position: absolute;
+      width: 250px; height: 250px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: conic-gradient(
+        from 0deg,
+        rgba(214,167,74,0.2) 0deg,
+        transparent 90deg
+      );
+      animation: spin 90s linear infinite;
+    }
+
+    /* Head Outline */
+    .head {
+      position: absolute;
+      width: 180px; height: 240px;
+      top: 10%; right: 10%;
+      border: 1px solid rgba(214,167,74,0.12);
+      border-radius: 50% / 60%;
+      animation: float 20s ease-in-out infinite alternate;
+    }
+
+    /* Animations */
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.05); }
+    }
+    @keyframes spin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(20px); }
+    }
+
+    /* Video grid */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 40px;
+      position: relative;
+      z-index: 2;
+    }
+    .video-card {
+      border: 1px solid #D6A74A;
+      background-color: #332B1C;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .video-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 12px rgba(214,167,74,0.6);
+    }
+    .video-card img {
+      width: 100%;
+      display: block;
+    }
+    .video-card h2 {
+      font-size: 1rem;
+      margin: 12px 0;
+      font-weight: 400;
+    }
+    a {
+      text-decoration: none;
+      color: #D6A74A;
+    }
+  </style>
 </head>
 <body>
+  <div class="background"></div>
+  <div class="symbols">
+    <div class="spiral"></div>
+    <div class="head"></div>
+  </div>
+  <h1>InvisiAura</h1>
+  <div class="video-grid">
+    <div class="video-card">
+      <a href="https://youtu.be/gCkg-QO-u5U" target="_blank">
+        <img src="https://img.youtube.com/vi/gCkg-QO-u5U/hqdefault.jpg" alt="Teaser 1">
+        <h2>Teaser 1</h2>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="https://youtu.be/QDvQHHl_WRE" target="_blank">
+        <img src="https://img.youtube.com/vi/QDvQHHl_WRE/hqdefault.jpg" alt="Teaser 2">
+        <h2>Teaser 2</h2>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="https://youtu.be/2i8XpX9sc8I" target="_blank">
+        <img src="https://img.youtube.com/vi/2i8XpX9sc8I/hqdefault.jpg" alt="Teaser 3">
+        <h2>Teaser 3</h2>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="https://youtu.be/U5PXd0gR9BA" target="_blank">
+        <img src="https://img.youtube.com/vi/U5PXd0gR9BA/hqdefault.jpg" alt="Teaser 4">
+        <h2>Teaser 4</h2>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="https://youtu.be/MYMjLw3taY0" target="_blank">
+        <img src="https://img.youtube.com/vi/MYMjLw3taY0/hqdefault.jpg" alt="Compilation">
+        <h2>Compilation</h2>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="https://youtu.be/Ujy4u-SoQkg" target="_blank">
+        <img src="https://img.youtube.com/vi/Ujy4u-SoQkg/hqdefault.jpg" alt="First Video">
+        <h2>First Video</h2>
+      </a>
+    </div>
+    <div class="video-card">
+      <a href="https://youtu.be/Qz7xQmlH_Bw" target="_blank">
+        <img src="https://img.youtube.com/vi/Qz7xQmlH_Bw/hqdefault.jpg" alt="Signs Video">
+        <h2>Signs Video</h2>
+      </a>
+    </div>
+  </div>
 </body>
 </html>
