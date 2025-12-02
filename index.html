@@ -42,7 +42,7 @@
       text-align: center;
       padding: 0 20px;
       position: relative;
-      margin-bottom: 40px;
+      margin-bottom: 10px; /* Brought closer to Featured Videos */
     }
 
     .hero::before {
@@ -72,143 +72,24 @@
       margin-top: 10px;
       letter-spacing: 1px;
       max-width: 700px;
-      line-height: 1.4;
+      line-height: 1.5;
+      white-space: pre-line; /* Allows manual line breaks */
     }
 
     /* ------------------------------
-       VIDEO GRID
+       SECTION TITLE
     ------------------------------ */
     .section-title {
       text-align: center;
       letter-spacing: 1.5px;
       font-size: 1.6rem;
+      margin-top: 10px; /* Brought up closer to hero */
       margin-bottom: 24px;
       font-weight: 300;
       opacity: 0.95;
     }
 
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
-      padding: 0 40px 80px;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .video-card {
-      border: 1px solid rgba(214,167,74,0.4);
-      background-color: #111;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-      padding-bottom: 12px;
-    }
-
-    .video-card:hover {
-      transform: scale(1.03);
-      border-color: #D6A74A;
-      box-shadow: 0 0 15px rgba(214,167,74,0.5);
-    }
-
-    .video-card img {
-      width: 100%;
-      display: block;
-      border-bottom: 1px solid rgba(214,167,74,0.3);
-    }
-
-    .video-card h2 {
-      font-size: 1.1rem;
-      font-weight: 300;
-      margin: 14px 0 8px;
-      letter-spacing: 0.5px;
-    }
-
     /* ------------------------------
-       FOOTER
+       VIDEO GRID
     ------------------------------ */
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      opacity: 0.7;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      border-top: 1px solid rgba(214,167,74,0.25);
-    }
-
-  </style>
-</head>
-
-<body>
-
-  <!-- HERO -->
-  <section class="hero fade-in">
-    <h1>InvisiAura</h1>
-    <p class="tagline">
-      Quiet Transformation. Guided Frequency Portals for Alignment, Awakening, and Inner Shift.
-    </p>
-  </section>
-
-  <!-- VIDEO SECTION TITLE -->
-  <h2 class="section-title fade-in">Featured Videos</h2>
-
-  <!-- VIDEO GRID -->
-  <div class="video-grid fade-in">
-
-    <div class="video-card">
-      <a href="https://youtu.be/gCkg-QO-u5U" target="_blank">
-        <img src="https://img.youtube.com/vi/gCkg-QO-u5U/hqdefault.jpg" alt="Something Is Awakening">
-        <h2>Something Is Awakening</h2>
-      </a>
-    </div>
-
-    <div class="video-card">
-      <a href="https://youtu.be/QDvQHHl_WRE" target="_blank">
-        <img src="https://img.youtube.com/vi/QDvQHHl_WRE/hqdefault.jpg" alt="Rewire Your Mind">
-        <h2>Rewire Your Mind</h2>
-      </a>
-    </div>
-
-    <div class="video-card">
-      <a href="https://youtu.be/2i8XpX9sc8I" target="_blank">
-        <img src="https://img.youtube.com/vi/2i8XpX9sc8I/hqdefault.jpg" alt="Awaken Your Frequency">
-        <h2>Awaken Your Frequency</h2>
-      </a>
-    </div>
-
-    <div class="video-card">
-      <a href="https://youtu.be/U5PXd0gR9BA" target="_blank">
-        <img src="https://img.youtube.com/vi/U5PXd0gR9BA/hqdefault.jpg" alt="10 Second Reset">
-        <h2>10 Second Reset</h2>
-      </a>
-    </div>
-
-    <div class="video-card">
-      <a href="https://youtu.be/MYMjLw3taY0" target="_blank">
-        <img src="https://img.youtube.com/vi/MYMjLw3taY0/hqdefault.jpg" alt="Rewire Your Mind">
-        <h2>Rewire Your Mind</h2>
-      </a>
-    </div>
-
-    <div class="video-card">
-      <a href="https://youtu.be/Ujy4u-SoQkg" target="_blank">
-        <img src="https://img.youtube.com/vi/Ujy4u-SoQkg/hqdefault.jpg" alt="10 Signs">
-        <h2>10 Signs</h2>
-      </a>
-    </div>
-
-    <div class="video-card">
-      <a href="https://youtu.be/Qz7xQmlH_Bw" target="_blank">
-        <img src="https://img.youtube.com/vi/Qz7xQmlH_Bw/hqdefault.jpg" alt="Identity Shift">
-        <h2>Identity Shift</h2>
-      </a>
-    </div>
-
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    © InvisiAura — Quiet Transformation Through Frequency Portals
-  </footer>
-
-</body>
-</html>
+   
